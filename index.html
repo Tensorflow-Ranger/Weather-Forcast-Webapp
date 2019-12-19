@@ -115,7 +115,7 @@ function City() {
   
     var city = prompt("Please enter your city", "Delhi");
     document.getElementById("name").innerHTML = "Showing results for:  "+city;
-    $.getJSON(" https://crossorigin.me/https://api.openweathermap.org/data/2.5/weather?q="+city+"&APPID=73eeff43e6a42fced4654eb69f93b1bc&units=metric", function(data) {;
+    $.getJSON("https://api.openweathermap.org/data/2.5/weather?q="+city+"&APPID=73eeff43e6a42fced4654eb69f93b1bc&units=metric", function(data) {;
     gettingJSON(data);
     
   
