@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+    
+li {
+    float: left;
+}
+    
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+    
+li a:hover {
+     Background-color:#111;
+    
+      transition: all ease-in-out 250ms;
+    }
+    * {box-sizing:border-box}
+    body {font-family: Verdana,sans-serif;margin:0}
+    .mySlides {display:none}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      height:400px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    
+    @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+    .section-dark{
+      background-color:#282e34;
+      color:#ddd;
+    }
+    .section{
+      text-align:center;
+      padding:50px 80px;
+    }
+    .pimg1, .pimg2, .pimg3{
+      position:relative;
+      opacity:0.70;
+      background-position:center;
+      background-size:cover;
+      background-repeat:no-repeat;
+    
+      
+      background-attachment:fixed;
+    }
+    .ptext .border.trans{
+      background-color:transparent;
+    }
+    .pimg2{
+      background-image:url('Code.Png');
+      min-height:400px;
+    }
+    .button {
+      border-radius: 4px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 150px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+    
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    
+    .button:hover span {
+      padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 200px;
+    }
+    
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    .Team {
+        background-color: #333333;
+        padding: 20px;
+        text-align: center;
+        color:white;
+    }
+     .footer2 {background-color:#F1F1F1;
+        padding: 20px;
+        text-align: center;
+        color:black;
+    }
+    .vl {
+        border-left: 6px solid green;
+        height: 500px;
+        position: absolute;
+        left: 50%;
+        margin-left: -3px;
+        top: 0;
+    }
+    .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.inner-img {
+    transition: 0.3s;
+    overflow: hidden;
+}
+.grid-container {
+  display: grid;
+  grid-auto-rows: 150px;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+    </style>
+<title>Weather</title>
+<link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    function gettingJSON(json){
+            result = json;
+            temp = result["main"]["temp"];
+            clouds = result["clouds"]["all"];
+            sunset = result["sys"]["sunset"];
+            sunrise = result["sys"]["sunrise"];
+            wind_speed = result["wind"]["speed"];
+            
+            var date_sunset = new Date(sunset*1000);
+            var hours_sunset = date_sunset.getHours();
+            var minutes_sunset = "0" + date_sunset.getMinutes();
+            var seconds_sunset = "0" + date_sunset.getSeconds();
+
+            var date_sunrise = new Date(sunrise*1000);
+            var hours_sunrise = date_sunrise.getHours();
+            var minutes_sunrise = "0" + date_sunrise.getMinutes();
+            var seconds_sunrise = "0" + date_sunrise.getSeconds();
+
+            // Will display time in 10:30:23 format
+            var Sunrise_Time = hours_sunrise + ':' + minutes_sunrise.substr(-2) + ':' + seconds_sunrise.substr(-2);
+            var Sunset_Time = hours_sunset + ':' + minutes_sunset.substr(-2) + ':' + seconds_sunset.substr(-2);
+            document.getElementById("First").innerHTML = temp;
+            document.getElementById("Second").innerHTML = wind_speed;
+            document.getElementById("Third").innerHTML = Sunrise_Time +" "+Sunset_Time;
+            console.log(result)
+           // document.write(JSON.stringify(json),"\n",temp,"\n",clouds,"\n",Sunset_Time,"\n",Sunrise_Time,"\n",wind_speed);
+    }
+function City() {
+  
+    var city = prompt("Please enter your city", "Delhi");
+    document.getElementById("name").innerHTML = "Showing results for:  "+city;
+    $.getJSON("http://api.openweathermap.org/data/2.5/weather?q="+city+"&APPID=73eeff43e6a42fced4654eb69f93b1bc&units=metric", function(data) {;
+    gettingJSON(data);
+    
+  
+});
+}
+</script>
+</head>
+<body onload="City()">
+<script>
+
+</script>
+
+<h1 style="Text-align:center;Font-family:Annie Use Your Telescope;Font-size:40">Weather Forecast</h1>
+<ul>
+    <li style="Font-Family:Abel;Font-Size:15px"><a  href="#home">Home</a></li>
+    <li style="Font-Family:Abel;Font-Size:15px"><a href="#news">News</a></li>
+    <li style="Font-Family:Abel;Font-Size:15px"><a href="#Contact">Contact</a></li>
+    <li style="Font-Family:Abel;Font-Size:15px"><a href="#about">About</a></li>
+  </ul>
+ 
+  <br>
+  <h2 id="name" style="Text-align:center;Font-family:Annie Use Your Telescope;Font-size:20"> </h2>
+  <br>
+  <div class="row" style="margin:0px;padding:0%">
+<table style="width:100%">
+  <tr>
+  <th style="padding-left:150px;font-family: Annie Use Your Telescope;font-size: 25px;"><b>Temperature</b></th>
+  <th style="padding-left:250px;font-family: Annie Use Your Telescope;font-size: 25px;"><b>Wind Speed</b></th> 
+  <th style="padding-left:250px;font-family: Annie Use Your Telescope;font-size: 25px;"><b>Sunrise and Sunset</b></th>
+  </tr>
+</table>
+
+    <div class="col"><img src= "desert.jpg" alt="Blah" class="inner-img" style="width:400px;height:400px">
+      <h1 class="centered heading-1" id="First" style="color:white;margin:0px;"> 20.0</h1>
+    </div>
+    <div class="col" style="margin:0px;padding:0%;">
+    <img src= "wind.jpg" alt="Blah" class="inner-img" style="width:400px;height:400px">
+    <h1 class="centered heading-1" id="Second" style="color:white;margin:0px;">2.0</h1>
+    </div>
+    <div class="col" style="margin:0px;padding:0%;">
+    <img src= "sea.jpg" alt="Blah" class="inner-img" style="width:400px;height:400px">
+    <h1 class="centered heading-1" id="Third" style="color:white;margin:0px;">7:37:08 17:32:02</h1>
+    </div>
+  
+  </div>
+  <br>
+  <div class="section section-dark">
+  <p style="Font-family:Serif;font-size:20px;"><i style="font-size:30px">"Wherever you go, no matter what the weather, always bring your own sunshine."</i></p>
+  <p style="Font-family:Roboto;font-size:20px;">-Anthony J.D'Angelo</p>
+  </div>
+  
+  
+  <br>
+  </div>
+  
+  <div class="Footer2" id="Contact">
+  <center><p style="Font-Size:40px;Font-family:Bad Script;">Contact Us</p></center>
+  <h4 Style="Font-size:40;Font-Family:Annie Use Your Telescope;Text-align:Center">To Send Us Feedback</h4>
+  <h4 Style="Font-size:30;Font-Family:Annie Use Your Telescope;Text-align:Center"> Send Us A Email At: rahul@gmail.com</h4>
+  </div>
+ 
+
+</body>
+</html>
